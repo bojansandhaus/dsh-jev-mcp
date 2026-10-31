@@ -1,5 +1,5 @@
 {
-  "name": "dsh-jev",
+  "name": "dsh-jev-mcp",
   "version": "0.1.0",
   "description": "TypeSafe Jev decision tools for DeepSeek Harness: a dependency-free client library and a stdio MCP server exposing jev_check, jev_route, jev_score and jev_evaluate.",
   "license": "MIT",

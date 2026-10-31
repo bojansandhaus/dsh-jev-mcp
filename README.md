@@ -1,4 +1,4 @@
-# dsh-jev
+# dsh-jev-mcp
 
 TypeSafe Jev decision tools for [DeepSeek Harness](https://github.com/deepseek-ai) (DSH).
 
@@ -36,8 +36,8 @@ Requirements: Node.js 20 or newer, a DSH install, and a TypeSafe API key from
 <https://console.typesafe.ai/keys>.
 
 ```sh
-git clone <this-repo> dsh-jev
-cd dsh-jev
+git clone <this-repo> dsh-jev-mcp
+cd dsh-jev-mcp
 bash scripts/install.sh
 ```
 
@@ -63,7 +63,7 @@ is enough.
 Code mode programs can import the library directly and call Jev inline, without a tool round trip:
 
 ```js
-import { evaluate, check, verdict } from "file:///path/to/dsh-jev/lib/jev.mjs";
+import { evaluate, check, verdict } from "file:///path/to/dsh-jev-mcp/lib/jev.mjs";
 
 // One judgment
 const { probability, verdict: answer } = await check({
