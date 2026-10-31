@@ -90,6 +90,13 @@ then `${DSH_HOME:-$HOME/.dsh}/secrets/jev.env` (override the path with `JEV_KEY_
 sandbox often starts with an empty environment, so either pass `apiKey` explicitly or read the key
 file from the program.
 
+`examples/demo.mjs` runs four end-to-end judgments (failure triage, routing, severity scoring, and a
+code review gate) and prints a summary table:
+
+```sh
+node examples/demo.mjs
+```
+
 `examples/triage.mjs` runs one command, captures its output, and asks three questions about the
 failure:
 
