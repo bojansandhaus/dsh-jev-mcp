@@ -1,0 +1,22 @@
+# Add this entry to the top-level array in your profile patch file:
+#   ${DSH_HOME:-$HOME/.dsh}/profiles/<profile>/cordis.patch.yml
+#
+# Restart DSH after editing (profile layers are composed at process start).
+# Then the tools appear as jev_check / jev_route / jev_score / jev_evaluate,
+# and in code mode as tools.mcp__jev__jev_check and friends.
+- insert:
+    - id: mcp-jev
+      name: "@deepseek-ai/dsh-mcp-client"
+      config:
+        serverName: jev
+        transport: stdio
+        # On a CLI install (the dsh launcher on PATH):
+        command: node
+        args:
+          - ${DSH_HOME:-$HOME/.dsh}/mcp/jev/server/jev-mcp.mjs
+        # On the macOS desktop app, run DSH's bundled Node instead:
+        #   command: /Applications/DeepSeek Harness.app/Contents/MacOS/DeepSeek Harness
+        #   env:
+        #     ELECTRON_RUN_AS_NODE: "1"
+        failOnStartupError: false
+        toolCallTimeoutMs: 60000

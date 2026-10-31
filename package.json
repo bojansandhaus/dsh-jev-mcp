@@ -1,0 +1,36 @@
+{
+  "name": "dsh-jev",
+  "version": "0.1.0",
+  "description": "TypeSafe Jev decision tools for DeepSeek Harness: a dependency-free client library and a stdio MCP server exposing jev_check, jev_route, jev_score and jev_evaluate.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./lib/jev.mjs"
+  },
+  "bin": {
+    "dsh-jev-mcp": "./server/jev-mcp.mjs"
+  },
+  "files": [
+    "lib",
+    "server",
+    "config",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "mcp",
+    "jev",
+    "typesafe",
+    "decision",
+    "triage"
+  ]
+}
